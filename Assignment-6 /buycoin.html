@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Buy Coins and Inquire about NFTs</title>
+</head>
+<body>
+
+    <header>
+            <nav class="navbar">
+                <ul>
+                    <li class="nav-item"><a href="index.html">HOME PAGE</a></li>
+                    <li class="nav-item"><a href="buycoin.html">BUY COINS</a></li>
+                    
+                </ul>
+            </nav>
+        </header>
+        <section class="hero">
+                <h1>Buy Coins and Inquire about NFTs</h1>
+                </section>
+        
+    
+    <main1>
+        <section>
+            <h2>Fill out the form to buy coins:</h2>
+            <form>
+                <div class="form-group">
+                    <label for="coinType">Select Coin Type:</label>
+                    <select name="coinType" id="coinType">
+                        <option value="bitcoin">Bitcoin</option>
+                        <option value="ethereum">Ethereum</option>
+                        <option value="litecoin">Litecoin</option>
+                        <option value="ripple">Ripple</option>
+                    </select>
+                </div>
+            
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                 
+                    <input type="number" name="quantity" id="quantity" required>
+                </div>
+                <br>   
+                <div class="form-group">
+                    <fieldset>
+                        <legend><b>Payment Method:</b></legend>
+                        <input type="radio" name="paymentMethod" value="creditCard" id="creditCard">
+                        <label for="creditCard">Credit Card</label>
+                        <input type="radio" name="paymentMethod" value="cryptoWallet" id="cryptoWallet">
+                        <label for="cryptoWallet">Crypto Wallet</label>
+                    </fieldset>
+                </div>
+                <br>
+            
+                <div class="form-group">
+                    <fieldset>
+                        <legend><b>Delivery Method:</b></legend>
+                        <input type="radio" name="deliveryMethod" value="email" id="email">
+                        <label for="email">Email</label>
+                        <input type="radio" name="deliveryMethod" value="physicalMail" id="physicalMail">
+                        <label for="physicalMail">Physical Mail</label>
+                    </fieldset>
+                </div>
+            <br>
+                <input type="submit" value="Buy Coins">
+            </form>
+        </section>
+
+        <section>
+            <h2>Fill out the form to inquire about NFTs:</h2>
+            <form >
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+                <br><br>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" rows="4" required></textarea>
+                
+                <input type="submit" value="Submit Inquiry">
+            </form>
+        </section>
+        
+        
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <p>Buying cryptocurrencies or inquiring about NFTs is easy with our platform. Follow these simple steps:</p>
+            <ol>
+                <li>Select the cryptocurrency you want to buy or provide your name, email, and message for NFT inquiries.</li>
+                <li>Choose your payment method (Credit Card or Crypto Wallet) and delivery method (Email or Physical Mail).</li>
+                <li>Click "Buy Coins" or "Submit Inquiry" to complete the process.</li>
+                <li>Our team will get in touch with you to confirm your order or assist with your NFT inquiry.</li>
+            </ol>
+        </section>
+    </main1>
+    
+    <footer>
+        <p>&copy; 2023 NFT/Blockchain Token. All rights reserved. UB WEBSITES</p>
+    </footer>
+</body>
+</html>

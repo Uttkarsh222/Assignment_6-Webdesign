@@ -1,0 +1,58 @@
+$primary-color: #0078D7;
+$accent-color: #E4572E;
+$border-radius: 5px;
+$font-primary: 'Arial', sans-serif;
+$font-heading: 'Roboto', sans-serif;
+$font-size-base: 16px;
+
+// Custom properties for root to ensure easy theming and accessibility
+:root {
+  --main-bg-color: #f0f0f0;
+  --text-color: #333;
+}
+
+// Function to calculate margins dynamically
+@function calculate-margin($multiplier) {
+  @return $multiplier * 10px;
+}
+
+// Placeholder selector for primary button styles
+%primary-button {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: $border-radius;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+
+  &:hover, &:focus {
+    background-color: darken($primary-color, 10%);
+    cursor: pointer;
+  }
+}
+
+// Applying the placeholder to actual classes
+.cta-button, .submit-button {
+  @extend %primary-button;
+}
+
+// Simplified mixin for button styles (if needed elsewhere)
+@mixin button-styles($bg-color: $primary-color) {
+  background-color: $bg-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: $border-radius;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+
+  &:hover, &:focus {
+    background-color: darken($bg-color, 10%);
+    cursor: pointer;
+  }
+}

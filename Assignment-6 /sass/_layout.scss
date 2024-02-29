@@ -1,0 +1,34 @@
+
+body {
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 20px; // Uniform padding around the body
+
+  // Responsive design adjustments
+  @media (max-width: 768px) {
+    padding: 10px; // Reduce padding on smaller screens for more screen real estate
+  }
+
+  // Implementing a mixin for box shadows to elevate certain elements if needed
+  @mixin box-shadow($x-offset: 0px, $y-offset: 2px, $blur: 8px, $color: rgba(0, 0, 0, 0.1)) {
+    box-shadow: $x-offset $y-offset $blur $color;
+  }
+
+  // Example of how to apply the mixin to elements that might need it (e.g., cards, modals)
+  .card, .modal {
+    @include box-shadow; // Applying with default values
+  }
+
+  // Function for dynamically adjusting font size based on screen width
+  @function dynamic-font-size($min-screen: 320px, $max-screen: 1200px, $min-font: 14px, $max-font: 16px) {
+    $scale: ($max-font - $min-font) / ($max-screen - $min-screen);
+    @return calc(#{$min-font} + (#{$scale} * (100vw - #{$min-screen})));
+  }
+
+  // Applying dynamic font size to paragraphs as an example
+  p {
+    font-size: dynamic-font-size(); // Utilizes the default parameters defined in the function
+  }
+}

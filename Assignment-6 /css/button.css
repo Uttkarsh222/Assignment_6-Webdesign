@@ -1,0 +1,140 @@
+.button-primary {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  color: white;
+  background-color: #007bff;
+  transition: background-color 0.3s, color 0.3s;
+}
+.button-primary:hover, .button-primary:focus {
+  background-color: #0062cc;
+  color: white;
+}
+
+.button-secondary {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  color: white;
+  background-color: #6c757d;
+  transition: background-color 0.3s, color 0.3s;
+}
+.button-secondary:hover, .button-secondary:focus {
+  background-color: #545b62;
+  color: white;
+}
+
+.button-danger {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  color: white;
+  background-color: #dc3545;
+  transition: background-color 0.3s, color 0.3s;
+}
+.button-danger:hover, .button-danger:focus {
+  background-color: #bd2130;
+  color: white;
+}
+
+.button-outline-primary {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  color: #007bff;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s;
+  border: 1px solid #007bff;
+}
+.button-outline-primary:hover, .button-outline-primary:focus {
+  background-color: rgba(0, 0, 0, 0);
+  color: #3395ff;
+}
+.button-outline-primary:hover, .button-outline-primary:focus {
+  background-color: #007bff;
+  color: white;
+}
+
+.button-small {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  color: white;
+  background-color: #007bff;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 5px 10px;
+  font-size: 13.6px;
+}
+.button-small:hover, .button-small:focus {
+  background-color: #0062cc;
+  color: white;
+}
+
+.button-large {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  color: white;
+  background-color: #007bff;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 15px 30px;
+  font-size: 18.4px;
+}
+.button-large:hover, .button-large:focus {
+  background-color: #0062cc;
+  color: white;
+}
+
+.button-disabled {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  color: white;
+  background-color: #868e96;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.button-disabled:hover, .button-disabled:focus {
+  background-color: #6c757d;
+  color: white;
+}
+.button-disabled:hover, .button-disabled:focus {
+  background-color: #868e96;
+  color: white;
+}/*# sourceMappingURL=button.css.map */

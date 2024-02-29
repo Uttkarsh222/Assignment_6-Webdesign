@@ -1,0 +1,125 @@
+
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // 3-column layout for larger screens
+  gap: calculate-margin(2);
+
+  // Responsive adjustment for smaller screens
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); // 2-column layout for smaller screens
+  }
+}
+
+.product-card {
+  background-color: white;
+  padding: calculate-margin(2);
+  border: 1px solid #ddd;
+  border-radius: $border-radius;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, filter 0.3s;
+
+  // Hover effects for product cards
+  &:hover {
+    transform: scale(1.05);
+    filter: brightness(95%);
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: $border-radius;
+  }
+
+  h2, p {
+    margin: calculate-margin(1) 0;
+  }
+
+  h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+// Using CSS Grid for main content layout, demonstrating another use of CSS Grid
+main1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; // Two columns of equal width
+  gap: 20px;
+  padding: 20px;
+
+  section {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: $border-radius;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    form {
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+      select, textarea, input[type="radio"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: $border-radius;
+        margin-bottom: 10px;
+      }
+
+      input[type="submit"] {
+        @extend %primary-button; // Assuming a placeholder is defined elsewhere for primary button styles
+        &:hover {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+    }
+  }
+}
+
+.features {
+  text-align: center;
+  padding: 20px;
+
+  h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+  }
+
+  // Applying Flexbox for features section layout
+  .features-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; // Ensure responsiveness by allowing items to wrap
+
+    .feature {
+      flex: 1;
+      min-width: 250px; // Minimum width for feature boxes to ensure they don't get too narrow
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: $border-radius;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+      h3, p {
+          margin: 10px 0;
+      }
+
+      h3 {
+          font-size: 18px;
+      }
+
+      p {
+          font-size: 16px;
+      }
+    }
+  }
+}

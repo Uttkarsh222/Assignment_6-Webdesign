@@ -1,0 +1,53 @@
+$primary-color: #3498db; // Example primary color
+$accent-color: #e67e22; // Example accent color
+$border-radius: 5px; // Border radius for buttons and other elements
+
+// Mixin for responsive font sizes
+@mixin responsive-font-size($size) {
+  font-size: $size;
+  @media (max-width: 768px) {
+    font-size: $size * 0.8;
+  }
+}
+
+// Function to calculate margins based on a multiplier
+@function calculate-margin($multiplier) {
+  @return 15px * $multiplier;
+}
+
+.hero {
+  background: linear-gradient(to bottom, $primary-color, darken($primary-color, 10%));
+  color: white;
+  padding: calculate-margin(4);
+  text-align: center;
+
+  // Using nesting for styling h1 within .hero
+  h1 {
+    @include responsive-font-size(48px); // Using mixin for responsive font size
+    margin-bottom: calculate-margin(2);
+  }
+
+  // Using nesting for styling p within .hero
+  p {
+    @include responsive-font-size(20px); // Responsive font size for paragraphs
+    margin-bottom: calculate-margin(4);
+  }
+
+  // Styling for call-to-action button with hover effect
+  .cta-button {
+    background-color: $accent-color;
+    color: white;
+    padding: calculate-margin(1.5) calculate-margin(3);
+    border: none;
+    border-radius: $border-radius;
+    text-decoration: none;
+    font-weight: bold;
+    @include responsive-font-size(18px); // Responsive font size for buttons
+    transition: background-color 0.3s;
+
+    // Using &:hover for nesting hover state
+    &:hover {
+      background-color: darken($accent-color, 10%);
+    }
+  }
+}

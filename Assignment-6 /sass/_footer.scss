@@ -1,0 +1,43 @@
+$primary-color: #0078D7; // Example primary color if not defined earlier
+$footer-text-color: white; // Example of using a specific variable for footer text color
+$footer-padding: 20px;
+$footer-font-size: 16px;
+
+footer {
+  text-align: center;
+  padding: $footer-padding;
+  background: $primary-color;
+  color: $footer-text-color;
+
+  // Utilizing nesting for paragraph styling within the footer
+  p {
+    font-size: $footer-font-size;
+    margin: 10px 0;
+
+    // Responsive design adjustments
+    @media (max-width: 768px) {
+      font-size: $footer-font-size * 0.9; // Slightly smaller font size on smaller screens
+    }
+  }
+
+  // Adding a responsive mixin for potentially repetitive responsive design patterns
+  @mixin responsive-padding {
+    @media (max-width: 768px) {
+      padding: $footer-padding * 0.5;
+    }
+  }
+
+  // Applying the responsive mixin
+  @include responsive-padding;
+
+  // Enhancing footer with a subtle hover effect for links if any
+  a {
+    color: $footer-text-color;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: lighten($primary-color, 20%); // Lighten the link color on hover for contrast
+    }
+  }
+}

@@ -1,0 +1,40 @@
+:root {
+  --main-bg-color: #f0f0f0;
+  --text-color: #333;
+}
+
+.submit-button, .cta-button {
+  background-color: #0078D7;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+.cta-button {
+  background-color: #0078D7;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+.submit-button {
+  background-color: #0078D7;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background 0.3s;
+}/*# sourceMappingURL=commonUi.css.map */

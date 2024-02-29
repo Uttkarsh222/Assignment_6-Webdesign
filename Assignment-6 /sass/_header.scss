@@ -1,0 +1,35 @@
+
+.header {
+    background: $primary-color;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  
+    // Responsive design adjustments
+    @media (max-width: 768px) {
+      padding: 20px; // Increase padding for smaller screens
+    }
+  
+    h1 {
+      font-family: 'Arial', sans-serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+  
+      // Responsive font sizing for smaller screens
+      @media (max-width: 768px) {
+        font-size: 28px; // Reduce font size to fit smaller screens better
+      }
+    }
+  
+    // Example of a mixin for responsive text alignment
+    @mixin responsive-text-align($alignment: center) {
+      text-align: $alignment;
+      @media (max-width: 768px) {
+        text-align: left; // Adjust text alignment for smaller screens if needed
+      }
+    }
+  
+    // Applying the mixin to the header for demonstration
+    @include responsive-text-align;
+  }
+  
